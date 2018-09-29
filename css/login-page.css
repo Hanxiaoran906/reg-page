@@ -294,7 +294,7 @@ button:active{
 }
 #errorTip{
     display: none;
-    margin: -6px auto -13px;
+    margin: -.12rem auto -.16rem;
     text-align: center;
     color: #c00;
 }
