@@ -1,8 +1,17 @@
 function adapt() {
     var winWidth = $(window).width();
     var fontSize = (winWidth / 1440) * 100;
+    var otherSize = (992 / 1440) * 100;
     // console.log($("html").css("font-size"));
     $("html").css("font-size",(fontSize < 100 ? fontSize : 100) + "px");
+
+    if(winWidth > 992){
+        $("html").css("font-size", (fontSize < 100 ? fontSize : 100) + "px");
+    }else {
+        $("html").css("font-size", otherSize + "px")
+    }
+
+
 }
 $(window).resize(function () {
     adapt()

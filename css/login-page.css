@@ -49,7 +49,7 @@ button:active{
     left: calc(50% + .7rem);
     width: 2.41rem;
     height: .72rem;
-    background: url("../imgs/e-logo.png");
+    background: url("../imgs/e-logo.png") no-repeat;
     background-size: 2.41rem;
 }
 /*————main————*/
@@ -63,12 +63,15 @@ button:active{
 }
 .main .pic{
     float: left;
-}
-.pic .picture{
     width: 4.55rem;
+    height: 6rem;
+    background: url("../imgs/main-pic.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 .main .content{
+    position: relative;
     width: calc(100% - 4.55rem);
+    height: 6rem;
     float: left;
     padding-left: .87rem;
 }
@@ -92,6 +95,7 @@ button:active{
     margin-bottom: .32rem;
 }
 .items .point{
+    margin-bottom: .1rem;
     text-indent: .1rem;
     line-height: .38rem;
     border-left: .06rem solid #25272e;
@@ -101,6 +105,8 @@ button:active{
     line-height: .3rem;
 }
 #more{
+    position: absolute;
+    bottom: 0;
     width: 2.38rem;
     height: .7rem;
     font-size: .24rem;
@@ -147,13 +153,13 @@ button:active{
     /*align-items: center;*/
     /*justify-content: center;*/
     float: left;
-    margin-right: calc((100% - 10.5rem) / 2);
+    margin-right: calc((100% - 10.5rem) / 2 - .1px);
     padding: 0 .65rem;
     width: 3.5rem;
     height: 2.15rem;
     font-size: .2rem;
     background: url("../imgs/text-bg.png") no-repeat;
-    background-size: 3.5rem;
+    background-size: 100% 100%;
 }
 .msg p{
     margin-top: 50%;
@@ -162,6 +168,9 @@ button:active{
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+.msg:nth-child(2){
+    text-align: center;
 }
 .msg:last-child{
     margin-right: 0;
@@ -289,4 +298,118 @@ button:active{
 .reg-text:focus{
     border-color: #29b078;
     outline: none;
+}
+
+@media all and (max-width: 991px){
+    .main{
+        width: 80%;
+    }
+    .items .item:nth-child(even){
+        margin-bottom: .5rem;
+        padding-right: .6rem;
+    }
+    .main .pic{
+        /*margin-top: 90%;*/
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%;
+        background-image: url("../imgs/main-pic2.jpg");
+    }
+    .main .content{
+        margin-top: 30px;
+        padding-left: 0;
+        width: 100%;
+        height: auto;
+    }
+    .main .point{
+        /*border-left: none;*/
+        /*border-right: 4.125px solid #25272e;*/
+        /*margin: auto 40%;*/
+        /*text-align: center;*/
+    }
+    .main #more{
+        position: relative;
+        left: calc(50% - 80px);
+    }
+    .reason .reason-title{
+        min-width: 340px;
+    }
+    .messages .msg{
+        /*width: 40%;*/
+        margin-right: 0;
+        margin-left: calc(50% - 120px);
+    }
+    .footer{
+        height: 240px;
+        background-size: cover;
+    }
+    .footer .contain{
+        width: 100%;
+    }
+    .footer .slogan{
+        float: none;
+        margin: auto;
+        height: auto;
+    }
+    .slogan p{
+        margin: 0;
+        text-align: center;
+        /*transform: none;*/
+    }
+    .contain #obtain{
+        margin: 25px auto 0;
+        float: none;
+        transform: none;
+        margin-left: calc(50% - 148px);
+    }
+}
+@media all and (max-width: 767px){
+    .header{
+        height: auto;
+    }
+
+    .header .jnshu{
+        position: static;
+        border: none;
+        padding: 0;
+        margin: 0 auto 30px;
+        width: 70%;
+        max-width: 400px;
+        height: 0;
+        padding-bottom: 15%;
+        background-size: 100%;
+    }
+    .header .yijiaolian{
+        position: static;
+        margin: auto;
+        width: 50%;
+        max-width: 260px;
+        height: 0;
+        padding-bottom: 15%;
+        background-size:100%;
+    }
+    .main{
+        margin-top: 40px;
+    }
+    .items .item:nth-child(even){
+        margin-bottom: .5rem;
+        padding-right: 0;
+    }
+}
+@media all and (max-width: 424px){
+    .items .point{
+        font-size: 24px;
+    }
+    .reason .reason-title{
+        font-size: 30px;
+        min-width: 300px;
+    }
+    .footer .slogan{
+        font-size: 16px;
+    }
+    .footer #obtain{
+        width: 200px;
+        height: 70px;
+        margin-left: calc(50% - 100px);
+    }
 }
