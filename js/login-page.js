@@ -2,7 +2,7 @@ var countdown=60;
 function settime(obj) {
     if (countdown == 0) {
         obj.removeAttribute("disabled");
-        obj.value="免费获取验证码";
+        obj.value="获取验证码";
         countdown = 60;
         return;
     } else {
