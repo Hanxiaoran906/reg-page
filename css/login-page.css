@@ -269,6 +269,9 @@ button:active{
     border-radius: .15rem;
     color: #ffffff;
 }
+.reg[disabled]{
+    background-color: #999;
+}
 .reg-text{
     margin-top: .08rem;
     margin-bottom: .15rem;
@@ -283,10 +286,16 @@ button:active{
 }
 .invitation-code + .reg-text{
     color: #999;
+    background-color: #fff;
 }
 .reg-text:focus{
     border-color: #29b078;
     outline: none;
+}
+#errorTip{
+    margin: -6px auto -13px;
+    text-align: center;
+    color: #c00;
 }
 
 @media all and (max-width: 991px){

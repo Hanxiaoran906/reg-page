@@ -1,12 +1,25 @@
+//判断表单内容是否已填写
+var regValue = $('.reg-text');
+regValue.keyup(function () {
+    if (regValue[0].value !== '' && regValue[1].value !== '' && regValue[2].value !== ''){
+        console.log("???");
+        $('.reg').removeAttr("disabled");
+    }else {
+        $('.reg').attr("disabled","true");
+    }
+});
+//获取验证码倒计时
 var countdown=60;
 function settime(obj) {
     if (countdown == 0) {
         obj.removeAttribute("disabled");
+        $(".get-code").css("background-color","#29b078");
         obj.value="获取验证码";
         countdown = 60;
         return;
     } else {
         obj.setAttribute("disabled", true);
+        $(".get-code").css("background-color","#999");
         obj.value="重新发送(" + countdown + ")";
         countdown--;
     }
@@ -45,6 +58,8 @@ function blur () {
 //立即领取按钮
 function obtain () {
     $(".shade").css("display","block");
+    // $(".reg").attr("disabled","true");
+
 }
 //遮罩关闭注册
 function cancel () {
