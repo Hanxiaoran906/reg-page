@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="shade">
-        <div class="shade-background"></div>
+        <div class="shade-background" onclick="cancel()"></div>
         <div class="register">
             <div class="phone-num">手机号</div>
             <input type="text" class="reg-text" placeholder="请输入手机号"><br>
@@ -34,7 +34,7 @@
         </header>
         <main class="main">
             <div class="summary clearFix">
-                <div class="pic"><img src="../imgs/main-pic.jpg" alt=""></div>
+                <div class="pic"><img src="../imgs/main-pic.jpg" class="picture"></div>
                 <div class="content">
                     <ul class="items">
                         <li class="item">
@@ -54,8 +54,7 @@
                             <p class="point">高就业</p>
                         </li>
                         <li class="item">
-                            <p class="item-text">独创课堂体系，IT修真院达到99%的就业率，毕业师兄真是可查。</p>
-                            <p class="item-text">九大职业可选，IT修真院职业规划师免费为你做职业规划，选出最适合自己的职业</p>
+                            <p class="item-text">独创课堂体系，IT修真院达到99%的就业率，毕业师兄真是可查。九大职业可选，IT修真院职业规划师免费为你做职业规划，选出最适合自己的职业</p>
                         </li>
                     </ul>
                     <button id="more">了解更多</button>
@@ -81,10 +80,12 @@
         <footer class="footer">
             <div class="contain">
                 <div class="slogan">
-                    <h2>易教练和IT修真院联手送你<big>3000元大礼包</big>,</h2>
-                    <h2>让您四个月内拿到互联网工作的新<big>“驾照”</big></h2>
+                    <p>
+                        易教练和IT修真院联手送你<big>3000元大礼包</big>,<br>
+                        让您四个月内拿到互联网工作的新<big>“驾照”</big>
+                    </p>
                 </div>
-                <button id="obtain">立即领取</button>
+                <button id="obtain" onclick="obtain()">立即领取</button>
             </div>
         </footer>
     </div>
