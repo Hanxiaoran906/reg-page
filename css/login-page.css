@@ -148,12 +148,12 @@ button:active{
     font: 20px Arial,sans-serif;
     background: url("../imgs/text-bg.png");
 }
-.msg p{
-    word-break: normal;
-    white-space: pre-wrap;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-}
+/*.msg p{*/
+    /*word-break: normal;*/
+    /*white-space: pre-wrap;*/
+    /*-ms-word-wrap: break-word;*/
+    /*word-wrap: break-word;*/
+/*}*/
 .msg:last-child{
     margin-right: 0;
 }
