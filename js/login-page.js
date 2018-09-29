@@ -1,5 +1,6 @@
 //判断表单内容是否已填写
 var regValue = $('.reg-text');
+var tipText;
 regValue.keyup(function () {
     if (regValue[0].value !== '' && regValue[1].value !== '' && regValue[2].value !== ''){
         console.log("???");
@@ -8,6 +9,28 @@ regValue.keyup(function () {
         $('.reg').attr("disabled","true");
     }
 });
+//判断表单格式是否正确
+function register() {
+    $('#errorTip').css("display","block");
+    if(regValue[0].value.length != 11){
+        tipText = "手机号输入错误";
+        // return tipText;
+    }else if (regValue[1].value.length != 6){
+        tipText = "验证码输入错误";
+        // return tipText;
+    }else if(regValue[2].value.length < 6){
+        tipText = "密码输入错误";
+        // return tipText;
+    }else{
+        tipText = "Success!";
+        $('.shade').css('display','none');
+    }
+    $('#errorTip').text(tipText);
+    setTimeout(function () {
+        $('#errorTip').css("display","none");
+    },1000)
+}
+
 //获取验证码倒计时
 var countdown=60;
 function settime(obj) {

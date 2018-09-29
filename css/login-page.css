@@ -293,6 +293,7 @@ button:active{
     outline: none;
 }
 #errorTip{
+    display: none;
     margin: -6px auto -13px;
     text-align: center;
     color: #c00;
