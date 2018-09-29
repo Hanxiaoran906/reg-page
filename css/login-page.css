@@ -145,13 +145,7 @@ button:active{
     font-size: .24rem;
     color: #7f8082;
 }
-.messages{
-    /*margin-right: calc((1050px - 100%) / 2);*/
-}
 .msg{
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
     float: left;
     margin-right: calc((100% - 10.5rem) / 2 - .1px);
     padding: 0 .65rem;
@@ -177,24 +171,17 @@ button:active{
 }
 /*footer*/
 .footer{
-    /*position: absolute;*/
-    /*bottom: 0;*/
     width: 100%;
-    /*height: 2.4rem;*/
     background: url("../imgs/footer-bg.jpg") no-repeat center;
     background-size: 100% 100%;
 }
 .contain{
     position: relative;
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: space-between;*/
     width: 12rem;
     height: 100%;
     margin: auto;
 }
 .slogan{
-    /*position: relative;*/
     float: left;
     height: 100%;
     font-size: .3rem;
@@ -207,7 +194,6 @@ button:active{
 }
 .slogan p{
     margin: 0;
-    /*margin-top: 1.2rem;*/
     -webkit-transform: translateY(calc(1.2rem - 50%));
     -moz-transform: translateY(calc(1.2rem - 50%));
     -ms-transform: translateY(calc(1.2rem - 50%));
@@ -312,7 +298,6 @@ button:active{
         padding-right: .6rem;
     }
     .main .pic{
-        /*margin-top: 90%;*/
         width: 100%;
         height: 0;
         padding-bottom: 50%;
@@ -324,12 +309,6 @@ button:active{
         width: 100%;
         height: auto;
     }
-    .main .point{
-        /*border-left: none;*/
-        /*border-right: 4.125px solid #25272e;*/
-        /*margin: auto 40%;*/
-        /*text-align: center;*/
-    }
     .main #more{
         position: relative;
         left: calc(50% - 80px);
@@ -338,7 +317,6 @@ button:active{
         min-width: 340px;
     }
     .messages .msg{
-        /*width: 40%;*/
         margin-right: 0;
         margin-left: calc(50% - 120px);
     }
@@ -357,7 +335,6 @@ button:active{
     .slogan p{
         margin: 0;
         text-align: center;
-        /*transform: none;*/
     }
     .contain #obtain{
         margin: 25px auto 0;
