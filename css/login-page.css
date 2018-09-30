@@ -160,7 +160,7 @@ input[type=button]:active{
 }
 
 .msg p{
-    padding: 0 .63rem;
+    padding: 0 .62rem;
     margin-top: 32%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
