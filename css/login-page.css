@@ -115,6 +115,9 @@ button:active{
     border: 1px solid #25272e;
     border-radius: .08rem;
 }
+#more:hover{
+    box-shadow: 0 0 10px #666;
+}
 #more:active{
     background-color: #f1f1f1;
 }
@@ -155,6 +158,7 @@ button:active{
     background: url("../imgs/text-bg.png") no-repeat;
     background-size: 100% 100%;
 }
+
 .msg p{
     margin-top: 50%;
     -webkit-transform: translateY(-50%);
@@ -162,6 +166,9 @@ button:active{
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+.messages .msg:hover P{
+    transform:scale(1.1,1.1) translateY(-50%);
 }
 .msg:nth-child(2){
     text-align: center;
@@ -173,7 +180,7 @@ button:active{
 .footer{
     width: 100%;
     background: url("../imgs/footer-bg.jpg") no-repeat center;
-    background-size: 100% 100%;
+    background-size: auto 100%;
 }
 .contain{
     position: relative;
@@ -216,6 +223,10 @@ button:active{
     font-size: .4rem;
     color: #ffffff;
 }
+#obtain:hover{
+    box-shadow: 0 0 10px #5cc79b;
+    font-size: .5rem;
+}
 #obtain:active{
     background-color: transparent;
     border: 2px solid #ffffff;
@@ -242,18 +253,28 @@ button:active{
     bottom: 0;
     left: 0;
     margin: auto;
-    padding: .46rem .72rem .42rem;
+    padding: .38rem .72rem .35rem;
     width: 4.5rem;
     height: 4.9rem;
     font-size: .2rem;
     color: #25272e;
     background-color: #fff;
 }
+#close{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: .6rem;
+    height: .6rem;
+    border: none;
+    font-size: .4rem;
+    line-height: .4rem;
+}
 .get-code{
     position: relative;
     top: -.05rem;
     width: 1.4rem;
-    height: .4rem;
+    height: .45rem;
     text-align: center;
     background-color: #29b078;
     border: none;
@@ -261,20 +282,26 @@ button:active{
     color: #ffffff;
     cursor: pointer;
 }
+.get-code:hover{
+    background-color: #59be94;
+}
 .reg{
-    margin-top: .25rem;
+    margin-top: .2rem;
     width: 100%;
     height: .6rem;
     background-color: #29b078;
     border-radius: .15rem;
     color: #ffffff;
 }
+.reg:hover{
+    background-color: #59be94;
+}
 .reg[disabled]{
     background-color: #999;
 }
 .reg-text{
     margin-top: .08rem;
-    margin-bottom: .15rem;
+    margin-bottom: .2rem;
     width: 100%;
     height: .28rem;
     border: none;
@@ -293,7 +320,8 @@ button:active{
     outline: none;
 }
 #errorTip{
-    display: none;
+    /*display: none;*/
+    height: .28rem;
     margin: -.12rem auto -.16rem;
     text-align: center;
     color: #c00;
@@ -326,9 +354,13 @@ button:active{
     .reason .reason-title{
         min-width: 340px;
     }
+    .messages{
+        margin-bottom: -.5rem;
+    }
     .messages .msg{
         margin-right: 0;
         margin-left: calc(50% - 120px);
+        margin-bottom: .5rem;
     }
     .footer{
         height: 240px;
@@ -345,6 +377,7 @@ button:active{
     .slogan p{
         margin: 0;
         text-align: center;
+        line-height: .9rem;
     }
     .contain #obtain{
         margin: 25px auto 0;

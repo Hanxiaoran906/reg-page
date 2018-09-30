@@ -1,35 +1,60 @@
 //判断表单内容是否已填写
-var regValue = $('.reg-text');
-var tipText;
+var regValue = $(".reg-text");
 regValue.keyup(function () {
-    if (regValue[0].value !== '' && regValue[1].value !== '' && regValue[2].value !== ''){
-        console.log("???");
+    if ($("#telNo").val() !== '' && $("#smsCode").val() !== '' && $("#pwd").val().length >= 6 && $("#errorTip").val() === ""){
         $('.reg').removeAttr("disabled");
     }else {
         $('.reg').attr("disabled","true");
     }
 });
 //判断表单格式是否正确
-function register() {
-    $('#errorTip').css("display","block");
-    if(regValue[0].value.length != 11){
-        tipText = "手机号输入错误";
-        // return tipText;
-    }else if (regValue[1].value.length != 6){
-        tipText = "验证码输入错误";
-        // return tipText;
-    }else if(regValue[2].value.length < 6){
-        tipText = "密码输入错误";
-        // return tipText;
-    }else{
-        tipText = "Success!";
-        $('.shade').css('display','none');
+//手机号校验
+function phone() {
+    var reg = /^0?(13[0-9]|15[012356789]|17[0678]|18[0123456789]|14[57])[0-9]{8}$/;
+    if ($("#telNo").val() == "") {
+        $("#errorTip").text("手机号码不能为空！");
+    } else if ($("#telNo").val().length < 11) {
+        $("#errorTip").text("手机号码长度有误！");
+    } else if (!reg.test($("#telNo").val())) {
+        $("#errorTip").text("手机号不存在！");
+    } else{
+        $("#errorTip").text("");
     }
-    $('#errorTip').text(tipText);
-    setTimeout(function () {
-        $('#errorTip').css("display","none");
-    },1000)
 }
+$("#telNo").on("blur",function () {
+    phone();
+});
+//验证码校验
+function smsCode() {
+    var reg = /^[0-9]{6}$/;
+    if ($("#smsCode").val() == "") {
+        $("#errorTip").text("验证码不能为空！");
+    } else if ($("#smsCode").val().length < 6) {
+        $("#errorTip").text("验证码长度有误！");
+    } else if (!reg.test($("#smsCode").val())) {
+        $("#errorTip").text("验证码格式错误！");
+    } else{
+        $("#errorTip").text("");
+    }
+}
+$("#smsCode").on("blur",function () {
+    smsCode();
+});
+//密码校验
+function password() {
+    var reg = /^[a-zA-Z]\w{5,17}$/;
+    if ($("#pwd").val() == "") {
+        $("#errorTip").text("密码不能为空！");
+    } else if (!reg.test($("#pwd").val())) {
+        $("#errorTip").text("密码只能包含字母、数字和下划线");
+    } else{
+        $("#errorTip").text("");
+    }
+}
+$("#pwd").on("blur",function () {
+    password();
+});
+
 
 //获取验证码倒计时
 var countdown=60;
@@ -81,13 +106,14 @@ function blur () {
 //立即领取按钮
 function obtain () {
     $(".shade").css("display","block");
-    // $(".reg").attr("disabled","true");
-
 }
 //遮罩关闭注册
 function cancel () {
     $(".shade").css("display","none");
 }
+$("#close").on("click",cancel);
 $(".reg-text").on("focus",focus);
 $(".reg-text").on("blur",blur);
+
+
 
