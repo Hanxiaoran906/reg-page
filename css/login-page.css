@@ -159,7 +159,7 @@ button:active{
 }
 
 .msg p{
-    padding: 0 .64rem;
+    padding: 0 .63rem;
     margin-top: 32%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
