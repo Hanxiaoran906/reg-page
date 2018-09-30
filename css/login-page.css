@@ -172,10 +172,10 @@ input[type=button]:active{
     transform:scale(1.1,1.1) translateY(-50%);
 }
 .msg:nth-child(2) p{
-    padding: 0 .82rem;
+    padding: 0 .81rem;
 }
 .msg:nth-child(3) p{
-    padding: 0 .72rem;
+    padding: 0 .71rem;
 }
 .msg:last-child{
     margin-right: 0;
