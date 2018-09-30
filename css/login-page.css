@@ -167,7 +167,7 @@ button:active{
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     word-break: normal;
-    white-space: pre-wrap;
+    white-space: pre-line;
     word-wrap: break-word;
 }
 .messages .msg:hover P{
