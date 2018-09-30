@@ -110,14 +110,14 @@ button:active{
     width: 2.38rem;
     height: .7rem;
     font-size: .24rem;
-    color: #25272e;
-    background-color: #fff;
-    border: 1px solid #25272e;
+    color: #fff;
+    background-color: #29b078;
+    /*border: 1px solid #25272e;*/
     border-radius: .08rem;
 }
 #more:hover{
     border: none;
-    background-color: #29b078;
+    background-color: #1c7953;
     color: #ffffff;
 }
 .reason{
@@ -150,7 +150,7 @@ button:active{
 .msg{
     position: relative;
     float: left;
-    margin-right: calc((100% - 10.5rem) / 2 - .1px);
+    margin-right: calc((100% - 10.5rem) / 2 - 0.1px);
     width: 3.5rem;
     height: 2.15rem;
     font-size: .2rem;
@@ -171,7 +171,6 @@ button:active{
     transform:scale(1.1,1.1) translateY(-50%);
 }
 .msg:nth-child(2) p{
-    /*text-align: center;*/
     padding: 0 .84rem;
 }
 .msg:last-child{
@@ -220,12 +219,12 @@ button:active{
     height: 1.2rem;
     border: none;
     border-radius: .15rem;
-    background-color: #59c699;
+    background-color: #29b078;
     font-size: .4rem;
     color: #ffffff;
 }
 #obtain:hover{
-    background-color: #29b078;
+    background-color: #1c7953;
 }
 /*————遮罩层&弹窗————*/
 .shade{
@@ -280,6 +279,7 @@ button:active{
 }
 .get-code:hover{
     background-color: #59c699;
+    cursor: pointer;
 }
 .reg{
     margin-top: .2rem;
@@ -292,8 +292,10 @@ button:active{
 .reg:hover{
     background-color: #59c699;
 }
+.get-code[disabled],
 .reg[disabled]{
     background-color: #999;
+    cursor: not-allowed;
 }
 .reg-text{
     margin-top: .08rem;
@@ -321,6 +323,9 @@ button:active{
     margin: -.12rem auto -.16rem;
     text-align: center;
     color: #c00;
+}
+#inviCode{
+    cursor: not-allowed;
 }
 
 @media all and (max-width: 991px){

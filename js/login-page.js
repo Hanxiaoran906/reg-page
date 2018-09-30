@@ -7,6 +7,15 @@ regValue.keyup(function () {
         $('.reg').attr("disabled","true");
     }
 });
+//获取验证码按钮禁用
+$("#telNo").keyup(function () {
+    console.log("1111");
+    if ($("#telNo").val().length == 11){
+        phone();
+    }else {
+        $(".get-code").attr("disabled","true");
+    }
+});
 //判断表单格式是否正确
 //手机号校验
 function phone() {
@@ -19,6 +28,7 @@ function phone() {
         $("#errorTip").text("手机号不存在！");
     } else{
         $("#errorTip").text("");
+        $(".get-code").removeAttr("disabled");
     }
 }
 $("#telNo").on("blur",function () {

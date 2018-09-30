@@ -20,11 +20,11 @@
                 <div class="phone-num">手机号</div>
                 <input type="text" id="telNo" class="reg-text" placeholder="请输入手机号" maxlength="11" required ><br>
                 <div class="sms-code">验证码</div>
-                <input type="text" id="smsCode" class="reg-text" pattern="^\d{6}$" placeholder="请输入验证码" maxlength="6" required><input class="get-code" value="获取验证码" onclick="settime(this)" readonly><br>
+                <input type="text" id="smsCode" class="reg-text" placeholder="请输入验证码" maxlength="6" required><input class="get-code" type="button" value="获取验证码" onclick="settime(this)" readonly disabled><br>
                 <div class="password">密码</div>
                 <input type="password" id="pwd" class="reg-text" pattern="^\S{6,18}$" placeholder="请输入密码（字母开头，6~18位）" minlength="6" maxlength="18" required autocomplete="tel"><br>
                 <div class="invitation-code">邀请码</div>
-                <input type="text" class="reg-text" value="31419511" readonly disabled><br>
+                <input type="text" id="inviCode" class="reg-text" value="31419511" readonly disabled><br>
                 <p id="errorTip"></p>
                 <button class="reg" type="submit" onclick="register()" disabled>注册</button>
             </form>
