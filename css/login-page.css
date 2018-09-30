@@ -116,10 +116,9 @@ button:active{
     border-radius: .08rem;
 }
 #more:hover{
-    box-shadow: 0 0 10px #666;
-}
-#more:active{
-    background-color: #f1f1f1;
+    border: none;
+    background-color: #29b078;
+    color: #ffffff;
 }
 .reason{
     position: relative;
@@ -219,17 +218,12 @@ button:active{
     height: 1.2rem;
     border: none;
     border-radius: .15rem;
-    background-color: #29b078;
+    background-color: #59c699;
     font-size: .4rem;
     color: #ffffff;
 }
 #obtain:hover{
-    box-shadow: 0 0 10px #5cc79b;
-    font-size: .5rem;
-}
-#obtain:active{
-    background-color: transparent;
-    border: 2px solid #ffffff;
+    background-color: #29b078;
 }
 /*————遮罩层&弹窗————*/
 .shade{
@@ -283,7 +277,7 @@ button:active{
     cursor: pointer;
 }
 .get-code:hover{
-    background-color: #59be94;
+    background-color: #59c699;
 }
 .reg{
     margin-top: .2rem;
@@ -294,7 +288,7 @@ button:active{
     color: #ffffff;
 }
 .reg:hover{
-    background-color: #59be94;
+    background-color: #59c699;
 }
 .reg[disabled]{
     background-color: #999;
