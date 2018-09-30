@@ -16,7 +16,8 @@ button{
 button:focus{
     outline: none;
 }
-button:active{
+button:active ,
+input[type=button]:active{
     box-shadow: 0 .05rem .15rem rgba(0, 0, 0, .3) inset;
 }
 .clearFix:after{
